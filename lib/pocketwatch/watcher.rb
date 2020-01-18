@@ -12,6 +12,11 @@ module Pocketwatch
     #   option parser
     def initialize(command, options = {})
       @command = command
+
+      if @command.nil? || @command.empty?
+        warn "No command provided."
+        exit 1
+      end
       @options = options
     end
 

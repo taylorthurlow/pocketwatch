@@ -1,5 +1,6 @@
 require "optparse"
 
+require_relative "pocketwatch/version"
 require_relative "pocketwatch/watcher"
 
 module Pocketwatch

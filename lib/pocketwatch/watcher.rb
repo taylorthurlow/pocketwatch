@@ -29,8 +29,12 @@ module Pocketwatch
         # Double buffer the output by precomputing the results of the system
         # call. Then, clear the terminal and print the results as quickly as
         # possible - this should avoid any flickering due to clearing the
-        # terminal.
-        output = `#{@command}`
+        # terminal. Restrict the output of the command to the current height of
+        # the terminal - scrolling is not supported, and we want to see the
+        # first part of the output, not the last.
+        num_lines = `tput lines`.strip.to_i - 1
+        num_lines = 1 unless num_lines.positive?
+        output = `#{@command}`.split("\n").first(num_lines)
 
         clear_screen
         puts output

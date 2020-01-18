@@ -12,7 +12,11 @@ gem install pocketwatch
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+Usage: pocketwatch [options] -- <command>
+    -v, --version                    Print the version number
+    -n INTERVAL                      Length in seconds between command execution
+```
 
 ## License
 

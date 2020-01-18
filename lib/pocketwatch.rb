@@ -29,7 +29,7 @@ module Pocketwatch
         exit
       end
 
-      opts.on("-n INTERVAL", Integer, "Interval length in seconds between command execution") do |v|
+      opts.on("-n INTERVAL", Integer, "Length in seconds between command execution") do |v|
         unless v.positive?
           warn "Must provide a positive integer for the command execution interval."
           exit

@@ -1,3 +1,7 @@
+This gem was originally intended to solve a problem I had with my terminal setup and `watch`. In reality, the issue was not with `watch`, and therefore this gem has no reason to exist. It has now been archived because I hoard code.
+
+<hr>
+
 # Pocketwatch
 
 `pocketwatch` is a clone of the `watch` utility found on many UNIX-based operating systems. It exists entirely due to the fact that `watch` swallows CTRL-code shortcuts that aren't CTRL-C (interrupt), and as a result, makes it really difficult to use CTRL codes to navigate around terminal panes. A Ruby implementation serves the same purpose but doesn't jack up my terminal navigation.

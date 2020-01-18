@@ -3,11 +3,21 @@ require "optparse"
 require_relative "pocketwatch/watcher"
 
 module Pocketwatch
+  # Parse the ARGV input and run the command watcher.
+  #
+  # @param args [Array<String>] the array of input arguments, typically `ARGV`
+  #
+  # @return [void]
   def self.start(args)
     options = parse(args)
     Watcher.new(args.join(" "), options).run
   end
 
+  # Parse an argument list for configuration options
+  #
+  # @param args [Array<String>] the array of input arguments, typically `ARGV`
+  #
+  # @return [Hash] the options hash
   def self.parse(args)
     options = {}
 
